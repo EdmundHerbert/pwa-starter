@@ -30,6 +30,14 @@ export const router = new Router({
           lazy(() => import('./pages/app-about/app-about.js')),
         ],
         render: () => html`<app-about></app-about>`
+      },
+      {
+        path: resolveRouterPath('splash-page'),
+        title: 'Splash Page',
+        plugins: [
+          lazy(() => import('./pages/splash-page/splash-page.js')),
+        ],
+        render: () => html`<splash-page></splash-page>`
       }
     ]
   });
